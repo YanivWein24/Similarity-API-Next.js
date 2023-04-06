@@ -1,3 +1,42 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "react-app",
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "rules": {
+    "@typescript-eslint/quotes": [
+      "error",
+      "double",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "react/jsx-uses-react": ["off"],
+    "react/react-in-jsx-scope": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "react/function-component-definition": ["off"],
+    "no-underscore-dangle": ["off"],
+    "react/no-array-index-key": ["warn"],
+    "react/require-default-props": ["off"],
+    "jsx-a11y/click-events-have-key-events": ["off"],
+    "no-use-before-define": ["error", { "functions": false, "classes": false }],
+    "no-promise-executor-return": ["off"],
+    "no-nested-ternary": ["off"],
+    "@typescript-eslint/no-unused-expressions": ["off"]
+  }
 }
