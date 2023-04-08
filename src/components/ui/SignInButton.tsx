@@ -1,9 +1,9 @@
 "use client";
 
-import { signIn, signOut } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { useState } from "react";
 import Button from "./Button";
-// import { toast } from "./toast";
+import { toast } from "./Toast";
 
 /*
  * NextJS does not allow to pass function from server -> client components,
@@ -19,11 +19,11 @@ export default function SignInButton() {
       setIsLoading(true);
       await signIn("google");
     } catch (error) {
-      // toast({
-      //   title: "Error signing in",
-      //   message: "Please try again later.",
-      //   type: "error",
-      // });
+      toast({
+        title: "Error signing in",
+        message: "Please try again later.",
+        type: "error",
+      });
     }
   };
 
