@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import cn from "@/lib/utils";
 
@@ -22,20 +21,17 @@ interface LargeHeadingProps
   extends React.HTMLAttributes<HTMLHeadingElement>,
     VariantProps<typeof headingVariants> {}
 
-const LargeHeading = forwardRef<HTMLHeadingElement, LargeHeadingProps>(
-  ({ className, size, children, ...props }, ref) => {
-    return (
-      <h1
-        ref={ref}
-        {...props}
-        className={cn(headingVariants({ size, className }))}
-      >
-        {children}
-      </h1>
-    );
-  }
-);
+export default function LargeHeading({
+  className,
+  size,
+  children,
+  ...props
+}: LargeHeadingProps) {
+  return (
+    <h1 {...props} className={cn(headingVariants({ size, className }))}>
+      {children}
+    </h1>
+  );
+}
 
 LargeHeading.displayName = "Paragraph";
-
-export default LargeHeading;
