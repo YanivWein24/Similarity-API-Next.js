@@ -38,6 +38,7 @@
     "no-promise-executor-return": ["off"],
     "no-nested-ternary": ["off"],
     "@typescript-eslint/no-unused-expressions": ["off"],
-    "no-param-reassign": ["off"]
+    "no-param-reassign": ["off"],
+    "no-plusplus": ["off"]
   }
 }
