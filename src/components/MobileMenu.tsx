@@ -1,6 +1,6 @@
 "use client";
 
-import { Info, LayoutDashboard, Loader2, User } from "lucide-react";
+import { Home, Info, LayoutDashboard, Loader2, User } from "lucide-react";
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
@@ -44,6 +44,13 @@ export default function MobileMenu() {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56">
             <DropdownMenuGroup onClick={() => setOpen(false)}>
+              <DropdownMenuItem asChild>
+                <Link href="/" className="w-full flex items-center gap-1.5">
+                  <Home className="mr-2 h-5 w-5" />
+                  <span>Home</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
                 {session ? (
                   <Link

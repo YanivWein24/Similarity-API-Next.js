@@ -16,7 +16,16 @@ axios.request(options).then(function (response) {
     console.log(response.data);
 }).catch(function (error) {
     console.error(error);
-});`;
+});
+
+// Response:
+{
+  "success": true,
+  "text1": "First text",
+  "text2": "Second text",
+  "similarity": 0.9380026397508087
+}
+`;
 
 export const python = `import requests
 
@@ -40,7 +49,17 @@ if response.status_code == 200:
     data = response.json()
     print(data)
 else:
-    print(f"Request failed with status code {response.status_code}")`;
+    print(f"Request failed with status code {response.status_code}")
+    
+
+'''Response:'''
+{
+  "success": true,
+  "text1": "First text",
+  "text2": "Second text",
+  "similarity": 0.9380026397508087
+}
+`;
 
 export const bash = `curl -X POST \
 
@@ -53,4 +72,13 @@ export const bash = `curl -X POST \
 -d '{
   "text1": "First text",
   "text2": "Second text"
-}`;
+}
+
+Response:
+{
+  "success": true,
+  "text1": "First text",
+  "text2": "Second text",
+  "similarity": 0.9380026397508087
+}
+`;

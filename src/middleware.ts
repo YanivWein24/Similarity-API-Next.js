@@ -11,7 +11,7 @@ const redis = new Redis({
 
 const rateLimit = new Ratelimit({
   redis,
-  limiter: Ratelimit.slidingWindow(5, "30 m"), // 5 requests per 30 minutes
+  limiter: Ratelimit.slidingWindow(10, "30 m"), // 10 requests per 30 minutes
 });
 
 export default withAuth(

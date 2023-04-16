@@ -38,7 +38,7 @@ export default async function ApiDashboard() {
 
   return (
     <div className="container flex flex-col gap-6">
-      <LargeHeading>Welcome back, {user.user.name}</LargeHeading>
+      <LargeHeading>Welcome Back, {user.user.name}</LargeHeading>
       <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start items-center">
         <Paragraph>Your API Key:</Paragraph>
         <Input className="w-fit truncate" readOnly value={activeKey.key} />
