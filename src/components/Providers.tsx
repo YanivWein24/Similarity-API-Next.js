@@ -12,7 +12,7 @@ export default function Providers({ children }: { children: ReactNode }) {
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <QueryClientProvider client={queryClient}>
         <SessionProvider>
-          <Toaster />
+        <Toaster position="bottom-right" />
           {children}
         </SessionProvider>
       </QueryClientProvider>

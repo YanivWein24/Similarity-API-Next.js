@@ -8,7 +8,7 @@ generator client {
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
-  relationMode = "prisma" // needed in order to push prisma to db
+  relationMode = "prisma" // needed in order to push prisma to db (npx prisma db push)
 }
 
 
@@ -68,7 +68,7 @@ model ApiRequest {
   path          String
   status        Int
   duration      Int
-  usedApikey    String
+  usedApiKey    String
   ApiKey        ApiKey @relation(fields: [apiKeyId], references: [id])
   apiKeyId      String
 
