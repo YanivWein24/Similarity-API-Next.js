@@ -1,7 +1,7 @@
 import { getServerSession } from "next-auth";
 import { notFound } from "next/navigation";
-import { db } from "../../prisma/db";
 import { formatDistance } from "date-fns";
+import db from "../../prisma/db";
 import LargeHeading from "./ui/LargeHeading";
 import Paragraph from "./ui/Paragraph";
 import Input from "./ui/Input";

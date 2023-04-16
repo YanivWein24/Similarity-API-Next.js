@@ -37,6 +37,7 @@
     "no-use-before-define": ["error", { "functions": false, "classes": false }],
     "no-promise-executor-return": ["off"],
     "no-nested-ternary": ["off"],
-    "@typescript-eslint/no-unused-expressions": ["off"]
+    "@typescript-eslint/no-unused-expressions": ["off"],
+    "no-param-reassign": ["off"]
   }
 }

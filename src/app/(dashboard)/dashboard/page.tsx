@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import authOptions from "@/lib/auth";
 import { notFound } from "next/navigation";
-import { db } from "../../../../prisma/db";
 import ApiDashboard from "@/components/ApiDashboard";
 import RequestApiKey from "@/components/RequestApiKey";
+import db from "../../../../prisma/db";
 
 export const metadata: Metadata = {
   title: "Similarity API | Dashboard",

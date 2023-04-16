@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import type { session, User } from "next-auth";
-import type { JWT } from "next-auth/jwt";
+import type { User } from "next-auth";
 
 type UerId = string;
 

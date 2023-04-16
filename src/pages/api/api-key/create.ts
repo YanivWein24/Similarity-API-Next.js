@@ -1,11 +1,11 @@
-import { authOptions } from "@/lib/auth";
+import authOptions from "@/lib/auth";
 import { CreateApiData } from "@/types/api";
 import { NextApiRequest, NextApiResponse } from "next";
 import { getServerSession } from "next-auth";
 import { nanoid } from "nanoid";
-import { db } from "../../../../prisma/db";
 import { z } from "zod";
 import withMethods from "@/lib/api-middleware/withMethods";
+import db from "../../../../prisma/db";
 
 const handler = async (
   req: NextApiRequest,
@@ -13,7 +13,7 @@ const handler = async (
 ) => {
   try {
     const user = await getServerSession(req, res, authOptions).then(
-      (res) => res?.user
+      (response) => response?.user
     );
 
     if (!user)

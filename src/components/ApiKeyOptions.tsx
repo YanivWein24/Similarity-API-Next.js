@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
+import createApiKey from "@/helpers/create-api-key";
+import revokeApiKey from "@/helpers/revoke-api-key";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -11,8 +13,6 @@ import {
 } from "./ui/DropdownMenu";
 import Button from "./ui/Button";
 import { toast } from "./ui/Toast";
-import createApiKey from "@/helpers/create-api-key";
-import revokeApiKey from "@/helpers/revoke-api-key";
 
 interface ApiKeyOptionsProps {
   apiKeyId: string;

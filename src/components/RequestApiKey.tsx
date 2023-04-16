@@ -1,9 +1,9 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { toast } from "./ui/Toast";
 import createApiKey from "@/helpers/create-api-key";
 import { Key } from "lucide-react";
+import { toast } from "./ui/Toast";
 import LargeHeading from "./ui/LargeHeading";
 import Paragraph from "./ui/Paragraph";
 import CopyButton from "./ui/CopyButton";
