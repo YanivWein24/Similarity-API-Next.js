@@ -1,10 +1,9 @@
 "use client";
 
 import { signIn } from "next-auth/react";
-import * as React from "react";
-import { FC } from "react";
-import { toast } from "./ui/Toast";
+import { useState } from "react";
 import cn from "@/lib/utils";
+import { toast } from "./ui/Toast";
 import Button from "./ui/Button";
 
 interface GoogleAuthButtonProps extends React.HTMLAttributes<HTMLDivElement> {}
@@ -13,7 +12,7 @@ export default function GoogleAuthButton({
   className,
   ...props
 }: GoogleAuthButtonProps) {
-  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const loginWithGoogle = async () => {
     setIsLoading(true);

@@ -15,8 +15,9 @@ const rateLimit = new Ratelimit({
 });
 
 export default withAuth(
+  // eslint-disable-next-line consistent-return
   async function middleware(req) {
-    const pathname = req.nextUrl.pathname; // relative path without the domain
+    const { pathname } = req.nextUrl; // relative path without the domain
 
     // Manage rate limiting
     if (pathname.startsWith("/api")) {
